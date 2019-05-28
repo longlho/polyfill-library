@@ -788,6 +788,11 @@ jobs:
           command: node ./test/polyfills/test-individual-feature.js
             Element.prototype.dataset
       - run:
+          name: Testing Element.prototype.inert
+          no_output_timeout: 180m
+          command: node ./test/polyfills/test-individual-feature.js
+            Element.prototype.inert
+      - run:
           name: Testing Element.prototype.matches
           no_output_timeout: 180m
           command: node ./test/polyfills/test-individual-feature.js
@@ -832,17 +837,17 @@ jobs:
           no_output_timeout: 180m
           command: node ./test/polyfills/test-individual-feature.js
             Node.prototype.contains
-      - run:
-          name: Testing NodeList.prototype.@@iterator
-          no_output_timeout: 180m
-          command: node ./test/polyfills/test-individual-feature.js
-            NodeList.prototype.@@iterator
   test_12:
     docker:
       - image: circleci/node:10
     steps:
       - checkout
       - run: npm ci
+      - run:
+          name: Testing NodeList.prototype.@@iterator
+          no_output_timeout: 180m
+          command: node ./test/polyfills/test-individual-feature.js
+            NodeList.prototype.@@iterator
       - run:
           name: Testing NodeList.prototype.forEach
           no_output_timeout: 180m
