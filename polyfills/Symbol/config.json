@@ -25,6 +25,7 @@
 		"Array.prototype.forEach",
 		"Array.prototype.filter",
 		"Array.prototype.map",
+		"Function.prototype.bind",
 		"Object.create",
 		"Object.defineProperty",
 		"Object.getOwnPropertyNames",
