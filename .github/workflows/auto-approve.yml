@@ -6,7 +6,7 @@ jobs:
   auto-approve:
     runs-on: ubuntu-latest
     steps:
-      - uses: hmarr/auto-approve-action@7782c7e2bdf62b4d79bdcded8332808fd2f179cd # pin@v2.0.0
+      - uses: hmarr/auto-approve-action@5d04a5ca6da9aeb8ca9f31a5239b96fc3e003029 # pin@v2.0.0
         if: github.actor == 'dependabot[bot]' || github.actor ==
           'dependabot-preview[bot]'
         with:
